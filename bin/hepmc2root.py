@@ -366,7 +366,7 @@ def main():
     if argc > 1:
         outfilename = argv[1]
     else:
-        outfilename = '%s.root' % nameonly(filename)
+        outfilename = argv[0].replace('.hepmc', '.root')
 
     stream = hepmc2root(filename, outfilename)
 
